@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cases — Ciely</title>
+  <meta name="description" content="Cases de posicionamento estratégico e gestão de redes sociais." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=8" />
+  <script>
+    // Aplicar tema imediatamente para evitar flash
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      } else {
+        document.documentElement.classList.add('light-mode');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-nav" id="siteNav">
+    <div class="wrap">
+      <a href="index.html" class="brand">CIELY<span>.</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html#inicio">Início</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="processo.html">Como funciona</a></li>
+          <li><a href="cases.html" class="is-active" aria-current="page">Cases</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+        <span id="themeIcon">🌙</span>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-copy">
+          <span class="eyebrow">Cases</span>
+          <h1 class="hero-title">Alguns lugares que ajudei a encontrar</h1>
+          <p class="hero-sub">
+            Cada projeto começa com um diagnóstico e termina com uma presença mais forte, mais clara e mais distinta.
+          </p>
+          <div class="hero-actions">
+            <a href="contato.html" class="btn btn-primary">Solicitar uma conversa</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="matrix-card">
+            <span class="matrix-caption">// Resultados</span>
+            <p style="margin:0; font-size:1.02rem; color:var(--ink); opacity:0.78;">
+              Os trabalhos priorizam clareza de marca, consistência editorial e crescimento com estratégia.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="eyebrow">Projetos</span>
+          <h2>Exemplos que mostram o caminho</h2>
+          <p>Substitua os blocos abaixo por prints reais, fotos ou capturas de tela dos projetos quando estiver pronto.</p>
+        </div>
+
+        <div class="cases-grid">
+          <div class="case-card reveal">
+            <div class="case-thumb">[ imagem do case ]</div>
+            <div class="case-body">
+              <span class="eyebrow">Case 01</span>
+              <h3>[Nome do cliente]</h3>
+              <span class="case-metric">[+120% de alcance]</span>
+              <p class="desc">[Breve descrição do que foi feito e o resultado alcançado.]</p>
+            </div>
+          </div>
+          <div class="case-card reveal">
+            <div class="case-thumb">[ imagem do case ]</div>
+            <div class="case-body">
+              <span class="eyebrow">Case 02</span>
+              <h3>[Nome do cliente]</h3>
+              <span class="case-metric">[+3.400 seguidores]</span>
+              <p class="desc">[Breve descrição do que foi feito e o resultado alcançado.]</p>
+            </div>
+          </div>
+          <div class="case-card reveal">
+            <div class="case-thumb">[ imagem do case ]</div>
+            <div class="case-body">
+              <span class="eyebrow">Case 03</span>
+              <h3>[Nome do cliente]</h3>
+              <span class="case-metric">[+58% de engajamento]</span>
+              <p class="desc">[Breve descrição do que foi feito e o resultado alcançado.]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="contact" id="contato">
+    <div class="wrap section">
+      <span class="eyebrow">Contato</span>
+      <h2 class="contact-title">Vamos encontrar o seu norte.</h2>
+      <p class="contact-sub">
+        Se a marca precisa de mais clareza, consistência e presença, posso ajudar a transformar isso em uma direção sólida.
+      </p>
+      <div class="contact-actions">
+        <a href="mailto:ciely.silva@ymal.com" class="btn btn-primary">Enviar e-mail</a>
+        <a href="https://wa.me/5531991516559" class="btn btn-ghost" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> CIELY. Todos os direitos reservados.</span>
+        <ul class="social-links">
+          <li><a href="https://instagram.com/cielysillva" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://linkedin.com/in/cielysillva" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://behance.net/cielysillva" target="_blank" rel="noopener">Behance</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js?v=6"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CIELY — Posicionamento Estratégico para Redes Sociais</title>
+<meta name="description" content="Portfólio de social media especializado em posicionamento estratégico de marcas." />
+
+<!-- ================================================================
+     COMO EDITAR ESTE SITE
+     - Troque "NORTE" pelo seu nome ou nome de marca (busque por NORTE no arquivo)
+     - Troque os textos entre [colchetes] pelo seu conteúdo real
+     - Troque os links de e-mail, WhatsApp e redes sociais no rodapé
+     - As imagens dos cases foram substituídas por blocos de cor de propósito:
+       quando tiver prints/fotos reais, troque a <div class="case-thumb"> por uma <img>
+     ================================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css?v=10" />
+<script>
+  // Aplicar tema imediatamente para evitar flash
+  (function() {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark-mode');
+    } else {
+      document.documentElement.classList.add('light-mode');
+    }
+  })();
+</script>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="site-nav" id="siteNav">
+  <div class="wrap">
+    <a href="#top" class="brand">CIELY<span>.</span></a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="processo.html">Como funciona</a></li>
+        <li><a href="cases.html">Cases</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+      <span id="themeIcon">🌙</span>
+    </button>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow">Posicionamento estratégico</span>
+      <h1 class="hero-title">Seu lugar no mercado <em>não</em> é um acaso.</h1>
+      <p class="hero-sub">
+        Sou [Seu Nome], social media focada em posicionamento estratégico.
+        Ajudo marcas a sair do meio do ruído e ocupar o único espaço que é delas —
+        com clareza antes de estética.
+      </p>
+      <div class="hero-actions">
+        <a href="contato.html" class="btn btn-primary">Vamos conversar</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="matrix-card">
+        <span class="matrix-caption">// Mapa de posicionamento</span>
+        <svg class="matrix-svg matrix-anim" viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gráfico ilustrativo de posicionamento estratégico: eixo horizontal de parecido a diferente, eixo vertical de ruído a clareza, com um ponto se movendo até o quadrante de diferente e claro.">
+          <!-- quadrantes -->
+          <rect x="20" y="20" width="130" height="105" class="matrix-quadrant-fill" fill="var(--rose)"/>
+          <rect x="150" y="20" width="130" height="105" class="matrix-quadrant-fill" fill="var(--mint)"/>
+          <rect x="20" y="125" width="130" height="105" class="matrix-quadrant-fill" fill="var(--paper)"/>
+          <rect x="150" y="125" width="130" height="105" class="matrix-quadrant-fill" fill="var(--rose)" opacity="0.35"/>
+
+          <!-- eixos -->
+          <line x1="20" y1="125" x2="280" y2="125" stroke="var(--ink)" stroke-opacity="0.25" stroke-width="1"/>
+          <line x1="150" y1="20" x2="150" y2="230" stroke="var(--ink)" stroke-opacity="0.25" stroke-width="1"/>
+
+          <!-- labels dos eixos -->
+          <text x="24" y="14" class="matrix-axis-label">parecido</text>
+          <text x="235" y="14" class="matrix-axis-label">diferente</text>
+          <text x="24" y="245" class="matrix-axis-label">ruído</text>
+          <text x="240" y="245" class="matrix-axis-label" text-anchor="start">clareza (topo)</text>
+
+          <!-- trilha do ponto -->
+          <path class="matrix-trail" d="M 150 125 C 190 100, 210 60, 235 45" fill="none" stroke="var(--indigo)" stroke-width="1.4" stroke-linecap="round" opacity="0.5"/>
+
+          <!-- halo -->
+          <circle class="matrix-dot-halo" cx="235" cy="45" r="16" fill="var(--indigo)" opacity="0.15"/>
+
+          <!-- ponto -->
+          <circle class="matrix-dot" cx="235" cy="45" r="6" fill="var(--indigo)"/>
+          <text class="matrix-dot-label" x="246" y="42">seu lugar</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INÍCIO ============ -->
+<section class="section" id="inicio">
+  <div class="wrap">
+    <div class="about-copy reveal">
+      <span class="eyebrow">Estratégia</span>
+      <h2 style="margin-top:1rem; font-size:clamp(1.9rem,3.6vw,2.6rem);">Estratégia antes de estética</h2>
+      <p style="margin-top:1.2rem;">
+        Eu ajudo marcas a encontrar um posicionamento claro, consistente e memorável — antes de pensar em conteúdo para postar.
+      </p>
+      <p>
+        O foco está em entender o mercado, o público e o que a marca quer ser lembrada — para então transformar isso em direção, voz e conteúdo.
+      </p>
+      <ul class="about-list">
+        <li>Posicionamento de marca</li>
+        <li>Estratégia de conteúdo</li>
+        <li>Gestão de redes sociais</li>
+        <li>Direção criativa</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUEM SOU ============ -->
+<section class="section section-alt" style="background: var(--paper-2);">
+      <div class="wrap about-grid">
+        <img src="avatar.enc" alt="Ciely Silva" class="about-blob reveal" />
+        <div class="about-copy reveal">
+          <span class="eyebrow">Quem sou</span>
+          <h2 style="margin-top:1rem; font-size:clamp(1.9rem,3.6vw,2.6rem);">Posicionamento é a base de tudo</h2>
+          <p style="margin-top:1.2rem;">
+            Sou Ciely Silva, social media especializada em posicionamento estratégico para marcas que querem ser percebidas com mais clareza.
+          </p>
+          <p>
+            Trabalho com marcas que precisam sair do ruído, definir a própria voz e construir presença com intenção — e não só com frequência.
+          </p>
+          <ul class="about-list">
+            <li>Posicionamento de marca</li>
+            <li>Estratégia de conteúdo</li>
+            <li>Gestão de redes sociais</li>
+            <li>Direção criativa</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+ 
+<!-- ============ CONTATO / FOOTER ============ -->
+<footer class="contact" id="contato">
+  <div class="wrap section">
+    <span class="eyebrow">Contato</span>
+    <h2 class="contact-title">Vamos encontrar o seu norte.</h2>
+    <p class="contact-sub">
+      Me conte um pouco sobre a sua marca e o que você já tentou. Eu respondo com os
+      próximos passos.
+    </p>
+    <div class="contact-actions">
+      <a href="mailto:ciely.silva@ymal.com" class="btn btn-primary">Enviar e-mail</a>
+      <a href="https://wa.me/5531991516559" class="btn btn-ghost" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> CIELY. Todos os direitos reservados.</span>
+      <ul class="social-links">
+        <li><a href="https://instagram.com/cielysillva" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://linkedin.com/in/seuusuario" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://behance.net/seuusuario" target="_blank" rel="noopener">Behance</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js?v=6"></script>
+</body>
+</html>

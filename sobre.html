@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre — CIELY</title>
+  <meta name="description" content="Conheça o posicionamento estratégico de CIELY e a abordagem de trabalho." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=6" />
+  <script>
+    // Aplicar tema imediatamente para evitar flash
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      } else {
+        document.documentElement.classList.add('light-mode');
+      }
+    })();
+  </script>
+  <script>
+    // Redirecionar para a página Início (agora mesclada no index.html)
+    window.location.href = 'index.html#inicio';
+  </script>
+</head>
+<body>
+  <header class="site-nav" id="siteNav">
+    <div class="wrap">
+      <a href="index.html" class="brand">CIELY<span>.</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="sobre.html" class="is-active" aria-current="page">Sobre</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="processo.html">Como funciona</a></li>
+          <li><a href="cases.html">Cases</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+        <span id="themeIcon">🌙</span>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-copy">
+          <span class="eyebrow">Sobre</span>
+          <h1 class="hero-title">Estratégia antes de estética</h1>
+          <p class="hero-sub">
+            Eu ajudo marcas a encontrar um posicionamento claro, consistente e memorável — antes de pensar em conteúdo para postar.
+          </p>
+          <div class="hero-actions">
+            <a href="contato.html" class="btn btn-primary">Falar sobre o projeto</a>
+            <a href="servicos.html" class="btn btn-ghost">Ver serviços</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="matrix-card">
+            <span class="matrix-caption">// Abordagem</span>
+            <p style="margin:0; font-size:1.02rem; color:var(--ink); opacity:0.78;">
+              O foco está em entender o mercado, o público e o que a marca quer ser lembrada — para então transformar isso em direção, voz e conteúdo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="wrap about-grid">
+        <div class="about-blob reveal" aria-hidden="true"></div>
+        <div class="about-copy reveal">
+          <span class="eyebrow">Quem sou</span>
+          <h2 style="margin-top:1rem; font-size:clamp(1.9rem,3.6vw,2.6rem);">Posicionamento é a base de tudo</h2>
+          <p style="margin-top:1.2rem;">
+            Sou [Seu Nome], social media especializada em posicionamento estratégico para marcas que querem ser percebidas com mais clareza.
+          </p>
+          <p>
+            Trabalho com marcas que precisam sair do ruído, definir a própria voz e construir presença com intenção — e não só com frequência.
+          </p>
+          <ul class="about-list">
+            <li>Posicionamento de marca</li>
+            <li>Estratégia de conteúdo</li>
+            <li>Gestão de redes sociais</li>
+            <li>Direção criativa</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="contact" id="contato">
+    <div class="wrap section">
+      <span class="eyebrow">Contato</span>
+      <h2 class="contact-title">Vamos encontrar o seu norte.</h2>
+      <p class="contact-sub">
+        Se a marca precisa de mais clareza, consistência e presença, posso ajudar a transformar isso em uma direção sólida.
+      </p>
+      <div class="contact-actions">
+        <a href="mailto:ciely.silva@gmail.com" class="btn btn-primary">Enviar e-mail</a>
+        <a href="https://wa.me/5531991516559" class="btn btn-ghost" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> CIELY. Todos os direitos reservados.</span>
+        <ul class="social-links">
+          <li><a href="https://instagram.com/cielysillva" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://linkedin.com/in/cielysillva" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://behance.net/cielysillva" target="_blank" rel="noopener">Behance</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js?v=5"></script>
+</body>
+</html>
