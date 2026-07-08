@@ -5,15 +5,16 @@
 
 :root {
   /* Cor */
-  --paper:    #FAF7FB; /* fundo principal, lavanda-quase-branco */
-  --paper-2:  #F1ECF6; /* fundo secundário, levemente mais escuro */
-  --ink:      #1A1523; /* texto principal, preto-ameixa */
-  --ink-soft: #55506490; /* texto secundário */
-  --indigo:   #4A3AFF; /* acento primário — elétrico */
-  --marigold: #FFB627; /* acento secundário — pop lúdico */
-  --rose:     #F2C6CF; /* fundo suave — cartões */
-  --mint:     #BFEAE0; /* fundo suave alternativo — cartões */
-
+  --paper:    #FAF5EE; /* fundo principal, marfim quente */
+  --paper-2:  #F2E6D6; /* fundo secundário, areia clara */
+  --ink:      #23303A; /* texto principal, azul-noite */
+  --ink-soft: #4A5C6690; /* texto secundário */
+  --indigo:   #8EA4B3; /* acento primário — azul-aço do céu */
+  --marigold: #E28F5F; /* acento secundário — laranja-queimado do sol */
+  --rose:     #E0CCB3; /* fundo suave — cartões, areia */
+  --mint:     #BBD3DA; /* fundo suave alternativo — cartões, céu */
+  --peach:    #EFBB8D; /* acento extra — pêssego, gradientes */
+  --sage:     #A7B59C; /* acento extra — verde-sálvia, detalhes */
   /* Tipografia */
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "Sora", "Segoe UI", sans-serif;
@@ -28,34 +29,39 @@
 /* Modo escuro */
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper:    #0F0D14; /* fundo escuro */
-    --paper-2:  #1A1523; /* fundo secundário escuro */
-    --ink:      #F5F2FF; /* texto claro */
-    --ink-soft: #B8B0CC; /* texto secundário claro */
-    --rose:     #2D1F26; /* fundo escuro rose */
-    --mint:     #1A2723; /* fundo escuro mint */
+    --paper:    #12181D; /* fundo escuro, céu noturno */
+    --paper-2:  #1B242B; /* fundo secundário escuro */
+    --ink:      #F3E7DC; /* texto claro, brilho do pôr do sol */
+    --ink-soft: #C9B8A8; /* texto secundário claro */
+    --rose:     #33261B; /* fundo escuro rose — areia noturna */
+    --mint:     #1C262B; /* fundo escuro mint — céu noturno */
   }
 }
 
 html.dark-mode {
-  --paper:    #0F0D14;
-  --paper-2:  #1A1523;
-  --ink:      #F5F2FF;
-  --ink-soft: #B8B0CC;
-  --rose:     #2D1F26;
-  --mint:     #1A2723;
+  --paper:    #12181D;
+  --paper-2:  #1B242B;
+  --ink:      #F3E7DC;
+  --ink-soft: #C9B8A8;
+  --rose:     #33261B;
+  --mint:     #1C262B;
 }
 
 html.light-mode {
-  --paper:    #FAF7FB;
-  --paper-2:  #F1ECF6;
-  --ink:      #1A1523;
-  --ink-soft: #55506490;
-  --rose:     #F2C6CF;
-  --mint:     #BFEAE0;
+  --paper:    #FAF5EE;
+  --paper-2:  #F2E6D6;
+  --ink:      #23303A;
+  --ink-soft: #4A5C6690;
+  --rose:     #E0CCB3;
+  --mint:     #BBD3DA;
 }
 
 * { box-sizing: border-box; }
+
+::selection {
+  background: var(--sage);
+  color: var(--ink);
+}
 
 html {
   scroll-behavior: smooth;
@@ -139,15 +145,15 @@ button:focus-visible {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(250, 247, 251, 0.85);
+  background: rgba(250, 245, 238, 0.85);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(26, 21, 35, 0.08);
+  border-bottom: 1px solid rgba(35, 48, 58, 0.08);
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 html.dark-mode .site-nav {
   background: rgba(15, 13, 20, 0.85);
-  border-bottom-color: rgba(245, 242, 255, 0.08);
+  border-bottom-color: rgba(243, 231, 220, 0.08);
 }
 
 .site-nav .wrap {
@@ -173,7 +179,7 @@ html.dark-mode .site-nav {
 }
 
 .theme-toggle:hover {
-  background: rgba(74, 58, 255, 0.1);
+  background: rgba(167, 181, 156, 0.18);
 }
 
 .brand {
@@ -216,6 +222,11 @@ html.dark-mode .site-nav {
 .nav-links a:hover::after,
 .nav-links a:focus-visible::after {
   right: 0;
+}
+
+.nav-links a.is-active::after {
+  right: 0;
+  background: var(--sage);
 }
 
 .nav-toggle {
@@ -301,7 +312,7 @@ html.dark-mode .site-nav {
 .btn-primary:hover { transform: translateY(-2px); background: var(--indigo); }
 
 .btn-ghost {
-  border-color: rgba(26, 21, 35, 0.25);
+  border-color: rgba(35, 48, 58, 0.25);
   color: var(--ink);
 }
 
@@ -433,8 +444,7 @@ html.dark-mode .site-nav {
 .about-blob {
   aspect-ratio: 1;
   border-radius: 40% 60% 55% 45% / 50% 45% 55% 50%;
-  background: linear-gradient(150deg, var(--indigo) 0%, var(--marigold) 100%);
-  position: relative;
+  background: linear-gradient(160deg, var(--indigo) 0%, var(--rose) 40%, var(--peach) 70%, var(--marigold) 100%);  position: relative;
 }
 
 .about-blob::after {
@@ -677,7 +687,7 @@ html.dark-mode .site-nav {
 .contact .btn-primary:hover { background: var(--paper); }
 
 .contact .btn-ghost {
-  border-color: rgba(250,247,251,0.35);
+  border-color: rgba(250,245,238,0.35);
   color: var(--paper);
 }
 .contact .btn-ghost:hover { border-color: var(--paper); }
