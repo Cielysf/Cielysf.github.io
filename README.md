@@ -1,4 +1,4 @@
-# NORTE — Portfólio de Social Media
+# CIELY — Portfólio de Social Media
 
 Site estático (HTML, CSS e JS puros) pronto para editar e publicar no GitHub Pages.
 
@@ -16,7 +16,7 @@ portfolio-site/
 
 Abra o `index.html` em qualquer editor de texto (VS Code, por exemplo) e procure por:
 
-- **`NORTE`** → troque pelo seu nome ou nome de marca (aparece no menu e no rodapé)
+- **`Ciely`** → troque pelo seu nome ou nome de marca (aparece no menu e no rodapé)
 - **Textos entre `[colchetes]`** → são os placeholders. Substitua por seus textos reais
   (apresentação, serviços, cases, depoimentos)
 - **Seção de contato** (`id="contato"`):
