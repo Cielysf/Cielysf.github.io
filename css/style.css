@@ -731,6 +731,20 @@ html.dark-mode .site-nav {
   transform: translateY(0);
 }
 
+/* Rodapé enxuto: só direitos autorais */
+.contact-slim {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.contact-slim .footer-bottom {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+  justify-content: center;
+  text-align: center;
+}
+
 /* =========================================================
    RESPONSIVE
    ========================================================= */
