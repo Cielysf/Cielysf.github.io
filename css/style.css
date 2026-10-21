@@ -794,3 +794,63 @@ html.dark-mode .site-nav {
     padding: 1rem var(--gutter);
   }
 }
+
+
+/* =========================================================
+   SELETOR DE IDIOMA (PT / EN / ES)
+   ========================================================= */
+
+.nav-tools {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid rgba(35, 48, 58, 0.14);
+  border-radius: 999px;
+}
+
+html.dark-mode .lang-switch {
+  border-color: rgba(243, 231, 220, 0.18);
+}
+
+.lang-switch button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  padding: 0.38rem 0.6rem;
+  border-radius: 999px;
+  color: var(--ink);
+  opacity: 0.65;
+  transition: background-color 0.25s ease, color 0.25s ease, opacity 0.25s ease;
+}
+
+.lang-switch button:hover {
+  opacity: 1;
+  background: rgba(167, 181, 156, 0.18);
+}
+
+.lang-switch button[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--paper);
+  opacity: 1;
+}
+
+.lang-switch button:focus-visible {
+  outline: 2px solid var(--marigold);
+  outline-offset: 2px;
+}
+
+@media (max-width: 380px) {
+  .lang-switch button { padding: 0.34rem 0.46rem; }
+}

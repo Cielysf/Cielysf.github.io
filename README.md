@@ -8,7 +8,8 @@ Site estático (HTML, CSS e JS puros) pronto para editar e publicar no GitHub Pa
 portfolio-site/
 ├── index.html      → conteúdo e estrutura do site
 ├── css/style.css   → cores, tipografia e layout
-├── js/script.js    → menu mobile, animações de scroll
+├── js/script.js    → menu mobile, tema claro/escuro, animações de scroll
+├── js/i18n.js      → traduções (PT / EN / ES) e troca de idioma
 └── README.md
 ```
 
@@ -23,6 +24,33 @@ Abra o `index.html` em qualquer editor de texto (VS Code, por exemplo) e procure
   - `mailto:seuemail@exemplo.com` → seu e-mail
   - `https://wa.me/5500000000000` → seu link do WhatsApp (formato: código do país + DDD + número, sem espaços)
   - Links de Instagram, LinkedIn e Behance no rodapé
+
+## Idiomas (PT / EN / ES)
+
+O site tem três idiomas. O visitante troca pelos botões **PT | EN | ES** no menu, e a escolha
+fica salva no navegador e vale para todas as páginas. Na primeira visita, o idioma é escolhido
+pelo idioma do navegador (se não for PT/EN/ES, abre em português). Também dá para abrir direto
+em um idioma com `?lang=en` ou `?lang=es` no final do endereço.
+
+**Como editar uma tradução:** abra `js/i18n.js`, procure a chave (ex.: `"index.hero.sub"`) e
+altere o texto em `pt`, `en` ou `es`.
+
+**Como adicionar um texto novo:**
+
+1. No HTML, coloque `data-i18n="minha.chave"` no elemento e deixe o texto em português dentro dele:
+   ```html
+   <p data-i18n="minha.chave">Texto em português</p>
+   ```
+2. Em `js/i18n.js`, adicione a chave com os três idiomas:
+   ```js
+   "minha.chave": { pt: "Texto em português", en: "Text in English", es: "Texto en español" },
+   ```
+
+Para texto com HTML dentro (ex.: `<em>`), use `data-i18n-html`. Para traduzir atributos
+(`aria-label`, `alt`, `content`), use `data-i18n-attr="alt:minha.chave"`.
+
+> Ao editar `css/style.css` ou `js/*.js`, aumente o número depois de `?v=` nos arquivos HTML
+> (ex.: `style.css?v=11` → `?v=12`) para o navegador não usar a versão antiga em cache.
 
 ## Como trocar os blocos de case por imagens reais
 
