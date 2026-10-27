@@ -614,6 +614,66 @@ html.dark-mode .site-nav {
   opacity: 0.72;
 }
 
+.case-media {
+  position: relative;
+}
+
+.case-carousel {
+  display: flex;
+  aspect-ratio: 4/3;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+}
+
+.case-carousel::-webkit-scrollbar { display: none; }
+
+.case-carousel img {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  scroll-snap-align: center;
+  user-select: none;
+}
+
+.case-carousel.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+}
+
+/* Setas */
+.case-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 0 0 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.case-prev { left: 0.7rem; }
+.case-next { right: 0.7rem; }
+
+.case-arrow:hover { opacity: 1; transform: translateY(-50%) scale(1.08); }
+.case-arrow:disabled { opacity: 0; pointer-events: none; }
+.case-media.is-single .case-arrow { display: none; }
+
 /* =========================================================
    DEPOIMENTOS
    ========================================================= */

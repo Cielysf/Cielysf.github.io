@@ -81,3 +81,55 @@ document.addEventListener("DOMContentLoaded", () => {
     revealEls.forEach((el) => el.classList.add("is-visible"));
   }
 });
+
+document.querySelectorAll('.case-media').forEach(function (media) {
+  var carousel = media.querySelector('.case-carousel');
+  var prev = media.querySelector('.case-prev');
+  var next = media.querySelector('.case-next');
+  if (!carousel) return;
+
+  // Só uma foto: esconde as setas
+  if (carousel.children.length < 2) {
+    media.classList.add('is-single');
+    return;
+  }
+
+  function updateArrows() {
+    var max = carousel.scrollWidth - carousel.clientWidth;
+    prev.disabled = carousel.scrollLeft <= 2;
+    next.disabled = carousel.scrollLeft >= max - 2;
+  }
+
+  prev.addEventListener('click', function () {
+    carousel.scrollBy({ left: -carousel.clientWidth, behavior: 'smooth' });
+  });
+
+  next.addEventListener('click', function () {
+    carousel.scrollBy({ left: carousel.clientWidth, behavior: 'smooth' });
+  });
+
+  carousel.addEventListener('scroll', updateArrows, { passive: true });
+  window.addEventListener('resize', updateArrows);
+  updateArrows();
+
+  // Arrastar com o mouse (no celular o dedo já funciona)
+  var down = false, startX = 0, startScroll = 0;
+
+  carousel.addEventListener('mousedown', function (e) {
+    down = true;
+    startX = e.pageX;
+    startScroll = carousel.scrollLeft;
+    carousel.classList.add('is-dragging');
+  });
+
+  window.addEventListener('mouseup', function () {
+    if (!down) return;
+    down = false;
+    carousel.classList.remove('is-dragging');
+  });
+
+  window.addEventListener('mousemove', function (e) {
+    if (!down) return;
+    carousel.scrollLeft = startScroll - (e.pageX - startX);
+  });
+});
